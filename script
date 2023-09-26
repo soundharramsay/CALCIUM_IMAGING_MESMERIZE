@@ -1,0 +1,2 @@
+conda create -n mesmerize_cal_image  python==3.7
+$ pip install mesmerize
