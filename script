@@ -1,11 +1,41 @@
-conda create --name 1_mesmerize_main_ev
+##########################################################
+# create a new env in some directory
+# tested on python3.9 and 3.10
+python3.10 -m venv python-venvs/mesmerize-core
+source python-venvs/mesmerize-core/bin/activate
+
+# get latest pip setuptools and wheel
+pip install --upgrade setuptools wheel pip
+
+# cd into or make a dir that has your repos
+mkdir repos
+cd repos
+
+# install caiman  ((((((( what they suggest)))))))
+git clone https://github.com/flatironinstitute/CaImAn.git
+cd CaImAn
+pip install -r requirements.txt
+pip install .
+caimanmanager.py install
+
+########################################################## for caiman  (((((((use it )))))))
+git clone https://github.com/flatironinstitute/CaImAn
+cd CaImAn/
+mamba env create -f environment.yml -n caiman
+source activate caiman
+pip install -e .
 
 
-## prioritize 'conda-forge' channel
-conda config --add channels conda-forge
+# install mesmerize-core
+pip install mesmerize-core
 
-## update existing packages to use 'conda-forge' channel
-conda update -n base --all
+# install fastplotlib
+pip install "fastplotlib[notebook]"
 
-## install 'mamba'
-conda install -n base mamba
+# run in ipython
+import mesmerize_core
+mesmerize_core.__version__
+
+
+###########################################################    for activating the env use the following line 
+source python-venvs/mesmerize-core/bin/activate
