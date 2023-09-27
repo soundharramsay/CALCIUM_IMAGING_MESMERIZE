@@ -10,6 +10,8 @@ pip install --upgrade setuptools wheel pip
 # cd into or make a dir that has your repos
 mkdir repos
 cd repos
+-------https://www.youtube.com/watch?v=iKcO23qTOYE
+
 
 # install caiman  ((((((( what they suggest)))))))
 git clone https://github.com/flatironinstitute/CaImAn.git
@@ -36,6 +38,20 @@ pip install "fastplotlib[notebook]"
 import mesmerize_core
 mesmerize_core.__version__
 
-
 ###########################################################    for activating the env use the following line 
 source python-venvs/mesmerize-core/bin/activate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
